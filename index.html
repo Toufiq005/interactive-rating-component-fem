@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+</head>
+<body class=" w-full h-screen flex flex-col justify-center items-center">
+
+  <div class="m-5 w-80 h-auto bg-dark-blue rounded-2xl">
+    <div id="before">
+      <div class="w-12 flex justify-center items-center h-12 rounded-full bg-medium-grey opacity-50 m-2">
+        <img src="images/icon-star.svg" alt="Star">
+      </div>
+      <div class="text-white mx-2">
+        <h1 class="text-3xl font-bold">How did we do?</h1>
+        <p class="text-medium-grey ">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      </div>
+      <div class="flex justify-evenly mt-5">
+        <button class="w-12 h-12 rounded-full bg-medium-grey text-xl text-white opacity-50 hover:opacity-100 active:bg-orange-500" onclick="getRating(1)">1</button>
+        <button class="w-12 h-12 rounded-full bg-medium-grey text-xl text-white opacity-50 hover:opacity-100 active:bg-orange-500" onclick="getRating(2)">2</button>
+        <button class="w-12 h-12 rounded-full bg-medium-grey text-xl text-white opacity-50 hover:opacity-100 active:bg-orange-500" onclick="getRating(3)">3</button>
+        <button class="w-12 h-12 rounded-full bg-medium-grey text-xl text-white opacity-50 hover:opacity-100 active:bg-orange-500" onclick="getRating(4)">4</button>
+        <button class="w-12 h-12 rounded-full bg-medium-grey text-xl text-white opacity-50 hover:opacity-100 active:bg-orange-500" onclick="getRating(5)">5</button>
+      </div>
+      <div class="w-72 h-10 bg-orange-500 rounded-3xl text-white flex justify-center items-center mx-auto my-5 hover:text-orange-500 hover:font-bold hover:bg-white">
+        <button class="w-72 h-10" onclick="nextStep()">Submit</button>
+      </div>
+    </div>
+    <div id="after" class="hidden">
+      <div class="flex flex-col items-center">
+        <div class="m-3">
+          <img src="images/illustration-thank-you.svg" alt="Thank You">
+        </div>
+        <div class="flex flex-col items-center">
+          <p class=" m-5 text-orange-500 bg-medium-grey-one w-48 text-center rounded-xl">
+            You selected <span id="rating"></span> out of 5
+          </p>
+          <h1 class=" m-1 text-3xl font-bold text-white">
+            Thank you!
+          </h1>
+          <p class=" m-3 text-center text-medium-grey">We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="index.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/toufiq005">Toufiq</a>.
+  </div>
+</body>
+</html>
